@@ -1,5 +1,21 @@
 def split_before_each_uppercases(formula):
-    pass # Replace the `pass` with your code
+    parts = []
+    current = ""
+
+    for ch in formula:
+      
+        if ch.isupper() and current:
+            parts.append(current)
+            current = ch
+        else:
+            current += ch
+
+    
+    if current:
+        parts.append(current)
+
+    return parts
+ 
 
 
 def split_at_first_digit(formula):
